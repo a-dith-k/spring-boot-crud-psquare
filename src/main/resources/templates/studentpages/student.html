@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Student</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<h3>First Name: <span  th:text="${student.firstName}"></span></h3>
+<h3>Last Name: <span  th:text="${student.lastName}"></span></h3>
+<h3>Username:  <span th:text="${student.username}"></span></h3>
+<h3>Gender:     <span  th:text="${student.gender}"></span></h3>
+<h3>Stream: <span th:text="${student.stream}"></span></h3>
+<h3 >Class Room: <span th:text="${student.classRoom}" ></span></h3>
+</body>
+</html>

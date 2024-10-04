@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Create New User</h1>
+	 <form  th:action="@{/students/create}" method="post"  th:object="${student}" >
+		     <input
+                        th:value="${student.username}"
+                        type="text"
+                        name="username"
+                        placeholder="username">
+              <input
+                        th:value="${student.firstName}"
+                     	type="text"
+                        name="firstName"
+                        placeholder="First Name">          
+              <input
+                        th:value="${student.lastName}"
+                        type="text"
+                        name="lastName"
+                        placeholder="Last Name">    
+                        
+              <input
+                        th:value="${student.gender}"
+                        type="text"
+                        name="gender"
+                        placeholder="Gender">   
+                        <select  th:field="${student.streamId}"
+                        					type="text"
+                        					name="stream"
+                        					placeholder="Stream">
+                        	<option th:value="${stream.id}" th:each="stream : ${streams}" th:text="${stream.name}"></option>
+                        </select>    
+         		
+         		   <input
+                        th:value="${student.classRoom}"
+                        type="text"
+                        name="classRoom"
+                        placeholder="classRoom"> 
+                       <button  type="submit">Submit</button>
+	</form>
+</body>
+</html>
